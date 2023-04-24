@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private static int id;
+    private int id;
     private String customerName;
     private String customerEmail;
     private String status;
@@ -26,12 +26,12 @@ public class Order {
         this.items = new ArrayList<>();
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Order.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCustomerName() {
