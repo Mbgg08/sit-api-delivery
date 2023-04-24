@@ -3,9 +3,9 @@ package upao.edu.pe.apidelivery.entities;
 public class Food {
     private String name;
     private String description;
-    private int price;
+    private double price;
 
-    public Food(String name, String description, int price){
+    public Food(String name, String description, double price){
         this.name = name;
         this.description = description;
         this.price = price;
@@ -27,8 +27,8 @@ public class Food {
         this.description = description;
     }
 
-    public int getPrice() {
-        return price;
+    public double getPrice() {
+        return this.price;
     }
 
     public void setPrice(int price) {

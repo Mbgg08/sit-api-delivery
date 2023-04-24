@@ -1,7 +1,5 @@
 package upao.edu.pe.apidelivery.entities;
 
-import org.springframework.web.util.DefaultUriBuilderFactory;
-
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ public class Order {
     private Duration estimatedDeliveryTime;
     private List<Food> items;
 
-    public Order(String customerName, String customerEmail){
+    public Order(){
         this.id = id++;
         this.customerName = customerName;
         this.customerEmail = customerEmail;

@@ -3,8 +3,10 @@ package upao.edu.pe.apidelivery.service;
 import org.springframework.stereotype.Service;
 import upao.edu.pe.apidelivery.entities.Order;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class OrderService {
@@ -12,6 +14,15 @@ public class OrderService {
 
     public OrderService(){
         this.listOrders = new ArrayList<>();
+    }
+
+    public Order createOrder(Order order){
+        Order orderNew = new Order();
+        orderNew.setCustomerName(order.getCustomerName());
+        orderNew.setCustomerEmail(order.getCustomerEmail());
+        orderNew.setItems(order.getItems());
+        this.listOrders.add(orderNew);
+        return order;
     }
 
     public Order findOrderById(int id){
